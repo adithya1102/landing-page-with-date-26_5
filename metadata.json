@@ -1,0 +1,8 @@
+
+{
+  "name": "CareVo - AI-Powered Restaurant OS",
+  "description": "A high-performance restaurant operating system orchestrating customer discovery, order management, and predictive analytics using cutting-edge AI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
