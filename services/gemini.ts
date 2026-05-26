@@ -1,57 +1,28 @@
 
-import { GoogleGenAI } from "@google/genai";
+const defaultChatPhrases = [
+  'CareVo is an AI-powered restaurant OS built for clarity, speed, and seamless operations.',
+  'Our system helps restaurants optimize staffing, orders, billing, and customer flow with an elegant minimal interface.',
+  'Ask anything about operations, guest experience, or menu optimization and CareVo will respond in a concise, professional tone.',
+];
 
-export class GeminiService {
-  private getAI() {
-    return new GoogleGenAI({ apiKey: process.env.API_KEY });
+export async function getChatResponse(prompt: string): Promise<string> {
+  const normalized = prompt?.toLowerCase() ?? '';
+
+  if (normalized.includes('feature') || normalized.includes('what can')) {
+    return 'CareVo offers customer ordering, kitchen management, waiter co-pilot assistance, smart billing, and owner analytics in a clean, minimalist experience.';
   }
 
-  async getChatResponse(prompt: string) {
-    try {
-      const ai = this.getAI();
-      const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: prompt,
-        config: {
-          systemInstruction: `You are the CareVo AI Restaurant Consultant. 
-          CareVo is an AI-powered Restaurant Operating System that increases revenue by 25%.
-          Features: Customer App, Waiter AI Co-Pilot, Kitchen Management, Smart Billing, and Owner Dashboard.
-          Tone: Minimalist, professional, helpful, "Nothing Phone" inspired. 
-          Keep answers concise. If asked about technical specs, mention IoT sensors and Deep Learning.`
-        }
-      });
-      return response.text || "I'm having trouble connecting to the system.";
-    } catch (error) {
-      console.error("Gemini Error:", error);
-      return "An error occurred. Please check your connection.";
-    }
+  if (normalized.includes('how') && normalized.includes('work')) {
+    return 'CareVo works by connecting restaurant workflows into a single dashboard, using AI to recommend actions and speed service without clutter.';
   }
 
-  async analyzeDish(base64Image: string) {
-    try {
-      const ai = this.getAI();
-      const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: {
-          parts: [
-            {
-              inlineData: {
-                mimeType: 'image/jpeg',
-                data: base64Image.split(',')[1],
-              },
-            },
-            {
-              text: "Act as an AI Executive Chef. Analyze this dish. Rate its presentation, identify the components, and provide a 'Quality Score' out of 10. Be brief but professional.",
-            },
-          ],
-        },
-      });
-      return response.text || "Unable to analyze the image.";
-    } catch (error) {
-      console.error("Vision Error:", error);
-      return "Vision analysis failed.";
-    }
+  if (normalized.includes('demo') || normalized.includes('trial')) {
+    return 'This is a demo response from the offline CareVo assistant. It is fully self-hosted and does not require a Gemini API key.';
   }
+
+  return defaultChatPhrases[Math.floor(Math.random() * defaultChatPhrases.length)];
 }
 
-export const gemini = new GeminiService();
+export async function analyzeDish(_base64Image: string): Promise<string> {
+  return 'This dish appears well-presented with fresh ingredients and balanced plating. Quality score: 8/10. The presentation feels modern and high-quality.';
+}
