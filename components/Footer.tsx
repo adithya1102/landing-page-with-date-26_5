@@ -13,10 +13,19 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-12 text-sm font-bold uppercase tracking-widest">
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          <a href="#contact" className="hover:text-white transition-colors">Support</a>
-        </div>
+  <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+  <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+  <a href="#contact" className="hover:text-white transition-colors">Support</a>
+
+  <a
+    href="https://www.instagram.com/carevo4care/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition-colors"
+  >
+    Instagram
+  </a>
+</div>
 
         <div className="text-xs text-gray-500 font-mono">
           &copy; 2025 CAREVO TECHNOLOGIES. ALL RIGHTS RESERVED.
