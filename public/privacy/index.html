@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — CareVo</title>
+    <meta name="description" content="What the CareVo customer app collects, why, and who it is shared with.">
+    <link rel="canonical" href="https://carevo.co.in/privacy/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .dot-grid {
+            background-image: radial-gradient(#f2f4f7 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .nothing-border {
+            border: 1px solid #e5e5e5;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nothing-border:hover {
+            border-color: #4da5ce;
+        }
+
+        /* Long-form document rhythm — scoped to the policy body only. */
+        .policy h2 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-top: 4rem;
+            margin-bottom: 1.25rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .policy h3 {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .policy p {
+            color: #6b7280;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .policy ul {
+            list-style: none;
+            margin-bottom: 1.25rem;
+        }
+
+        .policy li {
+            color: #6b7280;
+            line-height: 1.75;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .policy li::before {
+            content: "";
+            position: absolute;
+            left: 0.25rem;
+            top: 0.75rem;
+            width: 5px;
+            height: 5px;
+            border-radius: 9999px;
+            background-color: #d1d5db;
+        }
+
+        .policy strong {
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .policy a {
+            color: #000000;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .policy code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.8125em;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 0.15em 0.4em;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">CareVo</a>
+        <a href="/"
+            class="px-6 py-2 border-1.5 border-black rounded-lg text-sm font-bold hover:bg-black hover:text-white transition-all transform active:scale-95">
+            Back to site
+        </a>
+    </nav>
+
+    <main class="dot-grid">
+        <div class="max-w-3xl mx-auto px-6 py-20 md:py-28">
+
+            <header class="mb-16">
+                <div class="text-xs font-black uppercase tracking-widest text-gray-400 mb-4">Legal</div>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-6">Privacy Policy</h1>
+                <p class="text-gray-500 text-lg leading-relaxed">
+                    This policy explains what the CareVo customer app (<code
+                        class="text-sm bg-gray-100 rounded px-1.5 py-0.5 font-mono">com.carevo.customer_app</code>)
+                    collects, why, and who it is shared with.
+                </p>
+                <div class="mt-8 inline-block px-4 py-2 bg-white nothing-border rounded-lg">
+                    <span class="text-xs font-black uppercase tracking-widest text-gray-400">Last updated</span>
+                    <span class="text-sm font-bold ml-2">10 August 2026</span>
+                </div>
+            </header>
+
+            <div class="policy bg-white nothing-border rounded-2xl p-8 md:p-12 shadow-sm">
+
+                <h2 id="who-we-are">1. Who we are</h2>
+                <p>
+                    CareVo is operated by <strong>Adithya</strong>, No. 17, 22nd Street, Sowraag Mathura Flats,
+                    Nanganallur, Chennai 600061, India.<br>
+                    Privacy contact: <strong><a href="mailto:adithya@carevo.co.in">adithya@carevo.co.in</a></strong>
+                </p>
+
+                <h2 id="what-we-collect">2. What we collect</h2>
+
+                <h3>2.1 Account and identity</h3>
+                <p>Depending on how you sign in, we collect <strong>one or both</strong> of:</p>
+                <ul>
+                    <li><strong>Phone number</strong> — when you sign in with a one-time SMS code. Verification is
+                        performed by Google Firebase Authentication; we receive the verified number.</li>
+                    <li><strong>Email address, name and Google account identifier</strong> — when you sign in with
+                        Google.</li>
+                </ul>
+                <p>You may also optionally provide a <strong>display name</strong>.</p>
+                <p>
+                    We do <strong>not</strong> collect or store your password. We never receive your Google password,
+                    and SMS codes are verified by Firebase, not by us.
+                </p>
+
+                <h3>2.2 Location</h3>
+                <p>
+                    The app requests <strong>approximate and precise location</strong>
+                    (<code>ACCESS_COARSE_LOCATION</code>, <code>ACCESS_FINE_LOCATION</code>) and uses it to:
+                </p>
+                <ul>
+                    <li>sort nearby restaurants by distance;</li>
+                    <li>estimate your travel time to a restaurant so food is ready when you arrive;</li>
+                    <li>detect arrival at the restaurant during an active order.</li>
+                </ul>
+                <p>
+                    Location is used <strong>only while you are using the app or have a live order</strong>. Granting
+                    location is <strong>optional</strong> — declining it still lets you browse, order and pay; you will
+                    simply see a wider, approximate wait estimate.
+                </p>
+                <p>
+                    You can revoke location access at any time in Android Settings → Apps → CareVo → Permissions.
+                </p>
+
+                <h3>2.3 Orders and usage</h3>
+                <ul>
+                    <li>Items ordered, quantities, customisations and order notes</li>
+                    <li>Order status history and timestamps</li>
+                    <li>Pickup verification codes</li>
+                    <li>Loyalty points balance and any offers or coupons you redeem</li>
+                    <li>The restaurant you ordered from</li>
+                </ul>
+
+                <h3>2.4 Payments</h3>
+                <p>
+                    Payments are processed by <strong>Cashfree Payments</strong> (<code>cashfree.com</code>). You enter
+                    your payment details in Cashfree's checkout, not in CareVo.
+                </p>
+                <p>
+                    <strong>We never see, receive or store your full card number, UPI PIN, CVV, or bank
+                        credentials.</strong> Our servers store only a payment reference, the amount, the method type
+                    (e.g. "upi"), and whether the payment succeeded.
+                </p>
+
+                <h3>2.5 Notifications</h3>
+                <p>
+                    If you allow notifications (<code>POST_NOTIFICATIONS</code>), we store a <strong>Firebase Cloud
+                        Messaging device token</strong> to send order updates — order confirmed, being prepared, ready
+                    for pickup, item unavailable, order cancelled — and occasional reminders about restaurants you have
+                    ordered from. Declining notifications does not affect your ability to order.
+                </p>
+
+                <h3>2.6 Technical data</h3>
+                <p>
+                    Standard server logs (IP address, timestamps, error diagnostics) retained for security and
+                    debugging.
+                </p>
+
+                <h2 id="what-we-do-not-do">3. What we do NOT do</h2>
+                <ul>
+                    <li>We do <strong>not</strong> sell your personal data.</li>
+                    <li>We do <strong>not</strong> share your data with advertisers or data brokers.</li>
+                    <li>We do <strong>not</strong> track you across other apps or websites.</li>
+                    <li>We do <strong>not</strong> collect contacts, photos, microphone, camera, SMS content, or call
+                        logs.</li>
+                    <li>We do <strong>not</strong> track your location in the background when the app is closed.</li>
+                </ul>
+
+                <h2 id="sharing">4. Who your data is shared with</h2>
+                <div class="overflow-x-auto -mx-2 px-2 mb-6">
+                    <table class="w-full text-left border-collapse text-sm min-w-[540px]">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="py-3 pr-4 font-black uppercase tracking-widest text-xs text-gray-400">
+                                    Recipient</th>
+                                <th class="py-3 pr-4 font-black uppercase tracking-widest text-xs text-gray-400">What
+                                    they receive</th>
+                                <th class="py-3 font-black uppercase tracking-widest text-xs text-gray-400">Why</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-500">
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 pr-4 align-top"><strong class="text-black">The restaurant you order
+                                        from</strong></td>
+                                <td class="py-4 pr-4 align-top">Your order contents, order ID, pickup code</td>
+                                <td class="py-4 align-top">To prepare and hand over your order</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 pr-4 align-top"><strong class="text-black">Cashfree Payments</strong>
+                                </td>
+                                <td class="py-4 pr-4 align-top">Payment amount, order reference, contact details you
+                                    enter at checkout</td>
+                                <td class="py-4 align-top">To process payment</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 pr-4 align-top"><strong class="text-black">Google Firebase</strong>
+                                    (Authentication, Cloud Messaging)</td>
+                                <td class="py-4 pr-4 align-top">Phone number or Google account identifier; device
+                                    notification token</td>
+                                <td class="py-4 align-top">Sign-in verification and notification delivery</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 pr-4 align-top"><strong class="text-black">Google Maps Platform</strong>
+                                </td>
+                                <td class="py-4 pr-4 align-top">Coarse location / place searches you perform</td>
+                                <td class="py-4 align-top">Distance and travel-time estimates</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 pr-4 align-top"><strong class="text-black">Render</strong> (application
+                                    hosting) and <strong class="text-black">Neon</strong> (database hosting)</td>
+                                <td class="py-4 pr-4 align-top">All of the above, at rest</td>
+                                <td class="py-4 align-top">Application and database hosting</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>
+                    Each processes data under its own privacy policy. We share the minimum needed for the service to
+                    function, and for no other purpose.
+                </p>
+
+                <h2 id="retention">5. How long we keep it</h2>
+                <ul>
+                    <li><strong>Account data</strong> — until you ask us to delete your account.</li>
+                    <li><strong>Order history</strong> — retained for business and tax records.</li>
+                    <li><strong>Location points</strong> — retained only for the life of the relevant order, then
+                        discarded or aggregated.</li>
+                    <li><strong>Notification tokens</strong> — until you disable notifications or uninstall.</li>
+                </ul>
+
+                <h2 id="your-rights">6. Your rights</h2>
+                <p>
+                    You may request <strong>access to</strong>, <strong>correction of</strong>, or <strong>deletion
+                        of</strong> your personal data, and you may withdraw consent for location or notifications at
+                    any time through Android's permission settings.
+                </p>
+                <p>
+                    To request deletion of your account and associated personal data, email
+                    <strong><a href="mailto:adithya@carevo.co.in?subject=Account%20deletion%20request">adithya@carevo.co.in</a></strong>.
+                    We will respond within 30 days.
+                </p>
+
+                <h2 id="children">7. Children</h2>
+                <p>
+                    CareVo is not directed at children under 13, and we do not knowingly collect data from them.
+                </p>
+
+                <h2 id="security">8. Security</h2>
+                <p>
+                    Data is transmitted over HTTPS. Access to production data is restricted to authorised personnel. No
+                    system is perfectly secure, and we do not claim otherwise; we will notify affected users of a breach
+                    that puts their data at risk, as required by law.
+                </p>
+
+                <h2 id="changes">9. Changes</h2>
+                <p>
+                    Material changes will be reflected here with an updated "Last updated" date.
+                </p>
+
+                <h2 id="contact">10. Contact</h2>
+                <p>
+                    <strong>Adithya</strong> —
+                    <strong><a href="mailto:adithya@carevo.co.in">adithya@carevo.co.in</a></strong> —
+                    No. 17, 22nd Street, Sowraag Mathura Flats, Nanganallur, Chennai 600061, India
+                </p>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-gray-400 py-20 px-6 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-start justify-between gap-12 mb-16">
+                <div class="text-center md:text-left">
+                    <div class="text-2xl font-black text-white tracking-tighter mb-4">CareVo</div>
+                    <p class="text-sm max-w-xs leading-relaxed">
+                        Building the future of restaurant technology with passionate engineers.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-12 text-sm font-bold uppercase tracking-widest">
+                    <a href="/privacy/" class="text-white transition-colors">Privacy Policy</a>
+                    <a href="/#contact" class="hover:text-white transition-colors">Support</a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <div class="text-xs text-gray-500 font-mono">
+                    &copy; 2025 CAREVO TECHNOLOGIES. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
