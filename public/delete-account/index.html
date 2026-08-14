@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Your Account — CareVo Skip</title>
+    <meta name="description"
+        content="How to request deletion of your CareVo Skip account, and exactly what is erased and what is retained.">
+    <link rel="canonical" href="https://carevo.co.in/delete-account/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .dot-grid {
+            background-image: radial-gradient(#f2f4f7 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .nothing-border {
+            border: 1px solid #e5e5e5;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nothing-border:hover {
+            border-color: #4da5ce;
+        }
+
+        /* Long-form document rhythm — matches /privacy/. */
+        .policy h2 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-top: 4rem;
+            margin-bottom: 1.25rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .policy h2:first-child {
+            margin-top: 0;
+        }
+
+        .policy h3 {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .policy p {
+            color: #6b7280;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+
+        .policy ul {
+            list-style: none;
+            margin-bottom: 1.25rem;
+        }
+
+        .policy li {
+            color: #6b7280;
+            line-height: 1.75;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .policy li::before {
+            content: "";
+            position: absolute;
+            left: 0.25rem;
+            top: 0.75rem;
+            width: 5px;
+            height: 5px;
+            border-radius: 9999px;
+            background-color: #d1d5db;
+        }
+
+        .policy strong {
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .policy a {
+            color: #000000;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .policy code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.8125em;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 0.15em 0.4em;
+        }
+
+        /* Numbered steps for the in-app route. */
+        .steps {
+            counter-reset: step;
+            list-style: none;
+        }
+
+        .steps li {
+            counter-increment: step;
+            padding-left: 3rem;
+            min-height: 2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 9999px;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 0.8125rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <nav
+        class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-2xl font-black tracking-tighter">CareVo</a>
+        <a href="/"
+            class="px-6 py-2 border-1.5 border-black rounded-lg text-sm font-bold hover:bg-black hover:text-white transition-all transform active:scale-95">
+            Back to site
+        </a>
+    </nav>
+
+    <main class="dot-grid">
+        <div class="max-w-3xl mx-auto px-6 py-20 md:py-28">
+
+            <header class="mb-16">
+                <div class="text-xs font-black uppercase tracking-widest text-gray-400 mb-4">Account</div>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-6">Delete your account</h1>
+                <p class="text-gray-500 text-lg leading-relaxed">
+                    This page explains how to request deletion of your <strong class="text-black">CareVo Skip</strong>
+                    account (<code
+                        class="text-sm bg-gray-100 rounded px-1.5 py-0.5 font-mono">com.carevo.customer_app</code>),
+                    and exactly what is removed and what is kept.
+                </p>
+            </header>
+
+            <div class="policy bg-white nothing-border rounded-2xl p-8 md:p-12 shadow-sm">
+
+                <h2 id="in-app">Option 1 — From inside the app</h2>
+                <p>This is the fastest route, and it takes effect immediately.</p>
+                <ul class="steps">
+                    <li>Open <strong>CareVo Skip</strong> and make sure you are signed in.</li>
+                    <li>Tap the <strong>person icon</strong> in the top-right corner of the screen. This opens the
+                        <strong>Account</strong> screen.
+                    </li>
+                    <li>Scroll to the bottom and tap <strong>Delete my account</strong>.</li>
+                    <li>Read the summary of what will be erased, then tap <strong>Continue</strong>.</li>
+                    <li>Type <code>DELETE</code> to confirm, then tap <strong>Delete my account</strong>.</li>
+                </ul>
+                <p>
+                    You will be signed out straight away and returned to the sign-in screen. The deletion is applied at
+                    that moment — there is no waiting period and no undo.
+                </p>
+
+                <h2 id="by-email">Option 2 — By email</h2>
+                <p>
+                    If you have uninstalled the app, cannot sign in, or would simply rather not use the in-app route,
+                    email us and we will process the deletion for you:
+                </p>
+                <div class="not-prose my-8">
+                    <a href="mailto:adithya@carevo.co.in?subject=Account%20deletion%20request%20%E2%80%94%20CareVo%20Skip&amp;body=Please%20delete%20my%20CareVo%20Skip%20account.%0A%0ARegistered%20phone%20number%20or%20email%3A%20%0A"
+                        class="inline-block px-8 py-4 bg-black text-white rounded-xl font-bold no-underline hover:bg-gray-800 transition-all transform active:scale-95">
+                        <!--email_off-->Email adithya@carevo.co.in<!--/email_off-->
+                    </a>
+                </div>
+                <p>
+                    Send the request from the email address on your account if you signed in with Google. Otherwise,
+                    include the <strong>phone number</strong> you used to sign in, so we can find the right account. We
+                    may ask you to confirm ownership before proceeding — this protects you from someone else deleting
+                    your account.
+                </p>
+                <p>
+                    We respond to deletion requests within <strong>30 days</strong>, as stated in our
+                    <a href="/privacy/">Privacy Policy</a>.
+                </p>
+
+                <h2 id="what-happens">What actually happens</h2>
+                <p>
+                    We want to be straightforward about this, because "delete" can imply more than any system with
+                    accounting obligations can honestly do.
+                </p>
+                <p>
+                    <strong>Your account is anonymised, not erased row-and-branch.</strong> Every piece of information
+                    that identifies you is removed or overwritten, and the emptied account record is kept only as an
+                    unusable placeholder holding past order records together. Those order records remain, stripped of
+                    any link to you.
+                </p>
+
+                <h3>Permanently removed</h3>
+                <ul>
+                    <li>Your <strong>name</strong>, <strong>phone number</strong> and <strong>email address</strong></li>
+                    <li>Your <strong>Google sign-in link</strong>, replaced with a value that can never match a real
+                        account</li>
+                    <li>Your <strong>saved sign-in</strong> — you cannot log back in afterwards</li>
+                    <li>Your <strong>notification device token</strong>, and your notification history</li>
+                    <li>Your <strong>loyalty points balance</strong>, reset to zero</li>
+                    <li>Any <strong>unused coupons</strong> and any active membership period</li>
+                </ul>
+
+                <h3>Retained, with no link to you</h3>
+                <ul>
+                    <li><strong>Past order records and their line items</strong> — what was ordered, when, and for how
+                        much</li>
+                    <li><strong>Payment and points ledger entries</strong> — references and amounts only</li>
+                </ul>
+                <p>
+                    These are kept because restaurants need them for their <strong>tax, accounting and legal
+                        obligations</strong>, and because they are the record of settlement if a payment or refund is
+                    ever disputed. They carry no name, phone number or email once your account is anonymised, so they
+                    can no longer be traced back to you.
+                </p>
+                <p>
+                    Note that we never held your card number, UPI PIN, CVV or bank credentials in the first place —
+                    those stay with our payment processor and were never ours to delete. See the
+                    <a href="/privacy/">Privacy Policy</a> for the full picture.
+                </p>
+
+                <h2 id="after">After deletion</h2>
+                <ul>
+                    <li>Signing in with the same phone number or Google account is <strong>not</strong> possible —
+                        the old account can never be recovered or reactivated.</li>
+                    <li>You are welcome to sign up again at any time. That creates a <strong>completely new
+                            account</strong>, starting from zero points, with no connection to the old one.</li>
+                </ul>
+
+                <h2 id="contact">Questions</h2>
+                <p>
+                    <!--email_off--><strong><a href="mailto:adithya@carevo.co.in">adithya@carevo.co.in</a></strong><!--/email_off-->
+                    — No. 17, 22nd Street, Sowraag Mathura Flats, Nanganallur, Chennai 600061, India
+                </p>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-gray-400 py-20 px-6 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-start justify-between gap-12 mb-16">
+                <div class="text-center md:text-left">
+                    <div class="text-2xl font-black text-white tracking-tighter mb-4">CareVo</div>
+                    <p class="text-sm max-w-xs leading-relaxed">
+                        Building the future of restaurant technology with passionate engineers.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-12 text-sm font-bold uppercase tracking-widest">
+                    <a href="/privacy/" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="/delete-account/" class="text-white transition-colors">Delete Account</a>
+                    <a href="/#contact" class="hover:text-white transition-colors">Support</a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <div class="text-xs text-gray-500 font-mono">
+                    &copy; 2026 CAREVO TECHNOLOGIES. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

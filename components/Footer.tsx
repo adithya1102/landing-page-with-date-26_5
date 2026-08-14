@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-wrap justify-center gap-12 text-sm font-bold uppercase tracking-widest">
           <a href="/privacy/" className="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/delete-account/" className="hover:text-white transition-colors">Delete Account</a>
           <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           <a href="#contact" className="hover:text-white transition-colors">Support</a>
         </div>
