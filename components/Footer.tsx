@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="text-xs text-gray-500 font-mono">
-          &copy; 2025 CAREVO TECHNOLOGIES. ALL RIGHTS RESERVED.
+          &copy; 2026 CAREVO TECHNOLOGIES. ALL RIGHTS RESERVED.
         </div>
       </div>
     </footer>
