@@ -11,11 +11,14 @@ import Footer from './components/Footer';
 import DemoModal from './components/DemoModal';
 import ApplicationModal from './components/ApplicationModal';
 import { Internship } from './types';
+import { uploadFile, ApiError } from './services/api';
 
 const App: React.FC = () => {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [selectedInternship, setSelectedInternship] = useState<Internship | null>(null);
-  const [uploadedResume, setUploadedResume] = useState<{ name: string } | null>(null);
+  const [uploadedResume, setUploadedResume] = useState<{ name: string; url?: string } | null>(null);
+  const [uploadStatus, setUploadStatus] = useState<'idle' | 'uploading' | 'error'>('idle');
+  const [uploadError, setUploadError] = useState<string | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem('uploadedResume');
@@ -24,14 +27,28 @@ const App: React.FC = () => {
     }
   }, []);
 
-  const handleResumeUpload = (file: File) => {
-    const data = { name: file.name };
-    setUploadedResume(data);
-    localStorage.setItem('uploadedResume', JSON.stringify(data));
+  const handleResumeUpload = async (file: File) => {
+    setUploadStatus('uploading');
+    setUploadError(null);
+
+    try {
+      const result = await uploadFile(file);
+      const data = { name: file.name, url: result.data.url };
+      setUploadedResume(data);
+      localStorage.setItem('uploadedResume', JSON.stringify(data));
+      setUploadStatus('idle');
+    } catch (err) {
+      setUploadStatus('error');
+      if (err instanceof ApiError) {
+        setUploadError(err.message);
+      } else {
+        setUploadError('Failed to upload resume. Please try again.');
+      }
+    }
   };
 
   return (
-    <div className="min-h-screen bg-white selection:bg-black selection:text-white dot-grid">
+    <div className="min-h-screen bg-surface selection:bg-primary selection:text-white dot-grid">
       <Header onOpenDemo={() => setIsDemoModalOpen(true)} />
 
       <main>
@@ -40,22 +57,30 @@ const App: React.FC = () => {
         <FeatureGrid />
 
         <div id="careers" className="py-20 px-6 max-w-7xl mx-auto">
-          <div className="bg-white p-12 nothing-border rounded-2xl text-center mb-16 shadow-sm">
+          <div className="bg-surface p-12 nothing-border rounded-2xl text-center mb-16 shadow-sm">
             <h3 className="text-2xl font-bold mb-4 tracking-tight">📄 Apply Faster with AI</h3>
-            <p className="text-gray-500 mb-8 max-w-xl mx-auto">
+            <p className="text-text-soft mb-8 max-w-xl mx-auto">
               Upload your resume to pre-fill internship applications and help our system match your skills with the right learning track.
             </p>
-            <label className="block max-w-md mx-auto p-12 border-2 border-dashed border-gray-100 rounded-xl bg-gray-50 hover:bg-white hover:border-black cursor-pointer transition-all group">
+            <label className="block max-w-md mx-auto p-12 border-2 border-dashed border-border rounded-xl bg-background hover:bg-surface hover:border-secondary cursor-pointer transition-all group">
               <input
                 type="file"
                 className="hidden"
                 accept=".pdf,.doc,.docx"
                 onChange={(e) => e.target.files?.[0] && handleResumeUpload(e.target.files[0])}
+                disabled={uploadStatus === 'uploading'}
               />
-              <span className="text-gray-500 font-bold group-hover:text-black transition-colors">
-                {uploadedResume ? `✅ ${uploadedResume.name}` : "Click to upload resume"}
+              <span className="text-text-soft font-bold group-hover:text-secondary transition-colors">
+                {uploadStatus === 'uploading'
+                  ? '⏳ Uploading...'
+                  : uploadedResume
+                    ? `✅ ${uploadedResume.name}`
+                    : 'Click to upload resume'}
               </span>
             </label>
+            {uploadStatus === 'error' && uploadError && (
+              <p className="text-error text-sm mt-4">{uploadError}</p>
+            )}
           </div>
 
           <InternshipSection onApply={(job) => setSelectedInternship(job)} />
@@ -92,6 +117,7 @@ const App: React.FC = () => {
         <ApplicationModal
           job={selectedInternship}
           hasResume={!!uploadedResume}
+          resumeUrl={uploadedResume?.url}
           onClose={() => setSelectedInternship(null)}
         />
       )}
